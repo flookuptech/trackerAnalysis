@@ -1,0 +1,28 @@
+.productAndServicesHeading {
+  color: #30627c;
+  font-weight: 800;
+  font-size: 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.productAndServicesDescription {
+  font-weight: 800;
+  font-size: 15px;
+  color: #fb7454;
+  opacity: 0.8;
+  /* text-align: justify; */
+}
+
+@media (max-width: 768px) {
+  .productAndServicesHeading {
+    color: #30627c;
+    font-weight: 400;
+    font-size: 15px;
+  }
+  .productAndServicesDescription {
+    /* text-align: justify; */
+    font-weight: 400;
+    font-size: 13px;
+  }
+}
