@@ -148,6 +148,8 @@ fetch("http://ip-api.com/json")
     console.error("Error:", err);
   });
 
+//  =============== TO CHECK DATE ===============
+
 function log() {
   var logElem = document.querySelector(".tracker");
 
@@ -156,3 +158,100 @@ function log() {
   logElem.innerHTML += time;
 }
 log("...");
+
+//  =============== TO CHECK DEVICE ===============
+
+window.addEventListener("load", function () {
+  // PARSE USER AGENT
+  var result = bowser.getParser(navigator.userAgent).getResult();
+
+  //  =============== TO CHECK DEVICE BROWSER INFO ===============
+  function browLog() {
+    var browName = document.querySelector(".browName");
+
+    var browserName = result.browser.name;
+    console.log(browserName);
+    browName.innerHTML += browserName;
+  }
+  browLog("...");
+
+  //  =============== TO CHECK DEVICE BROWSER VERSION ===============
+
+  function browVerLog() {
+    var browVer = document.querySelector(".browVer");
+
+    var browserVer = result.browser.version;
+    console.log(browserVer);
+    browVer.innerHTML += browserVer;
+  }
+  browVerLog("...");
+
+  // =============== TO CHECK OPERATING SYSTEM ===============
+
+  //  =============== TO CHECK OPERATING SYSTEM NAME ===============
+
+  function osNameLog() {
+    var osName = document.querySelector(".osName");
+
+    var osysName = result.os.name;
+    console.log(osysName);
+    osName.innerHTML += osysName;
+  }
+  osNameLog("...");
+
+  //  =============== TO CHECK OPERATING SYSTEM VERSION ===============
+
+  function osVerLog() {
+    var osVer = document.querySelector(".osVer");
+
+    var osysVer = result.os.version;
+    console.log(osysVer);
+    osVer.innerHTML += osysVer;
+  }
+  osVerLog("...");
+
+  //  =============== TO CHECK OPERATING SYSTEM VERSION NAME ===============
+
+  function osVerNameLog() {
+    var osVerName = document.querySelector(".osVerName");
+
+    var osysVerName = result.os.versionName;
+    console.log(osysVerName);
+    osVerName.innerHTML += osysVerName;
+  }
+  osVerNameLog("...");
+
+  //  =============== TO CHECK DEVICE TYPE ===============
+
+  function deviceLog() {
+    var deviceType = document.querySelector(".deviceType");
+
+    var devicesType = result.platform.type;
+    console.log(devicesType);
+    deviceType.innerHTML += devicesType;
+  }
+  deviceLog("...");
+});
+
+//  =============== TO CHECK DEVICE HEIGHT ===============
+
+function deviceHLog() {
+  var deviceHType = document.querySelector(".deviceHeight");
+
+  var devicesHType = window.screen.availHeight + "px";
+  console.log(devicesHType);
+  deviceHType.innerHTML += devicesHType;
+}
+deviceHLog("...");
+
+//  =============== TO CHECK DEVICE WIDTH ===============
+
+console.log("Screen Widht: " + window.screen.availWidth + "px");
+function deviceWLog() {
+  var deviceWType = document.querySelector(".deviceWidth");
+
+  var devicesWType = window.screen.availWidth + "px";
+  console.log(devicesWType);
+  deviceWType.innerHTML += devicesWType;
+}
+deviceWLog("...");
